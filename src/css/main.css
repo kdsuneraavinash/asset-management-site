@@ -1,15 +1,19 @@
-#sign-in-card{
-    max-width: 300px !important;
-    margin: auto auto;
+#sign-in-card {
+  max-width: 300px !important;
+  margin: auto auto;
 }
 
-body{
-    background-image: url("../assets/background.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    overflow-x: hidden;
+body {
+  background-image: url("../assets/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
-section{
-    height: 100vh;
+section {
+  min-height: 100vh;
+}
+
+.mainfooter {
+  background: #3d6277;
 }

@@ -1,1 +1,0 @@
-$(window).on('resize',centerSignInCard);$(window).ready(centerSignInCard);function centerSignInCard(){var screen=$(window);var signInCard=$("#sign-in-card");}

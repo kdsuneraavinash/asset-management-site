@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+{% include 'header.htm' %}
+
+<body>
+    <section class="d-flex">
+        <form class="card align-self-center" id="sign-in-card"  action="#" method="get">
+            <div class="card-header">
+                <h5 class="card-title">Sign in</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Asset Manager</h6>
+            </div>
+
+            <div class="card-body">
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-user-tie"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="signInUserName" placeholder="Username" name="username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                        </div>
+                        <input type="password" class="form-control" id="signInPassword" placeholder="Password" name="password">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card-footer text-right">
+                <button class="btn btn-outline-primary" type="submit"><i class="fas fa-sign-in-alt"></i>&nbsp;Sign In</i></button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

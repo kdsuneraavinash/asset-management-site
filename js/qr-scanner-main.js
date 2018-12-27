@@ -14,5 +14,5 @@ $("#inputGroupFile").on("change", function (v) {
     }
     QrScanner.scanImage(file)
         .then(result => setResult(fileQrResult, result))
-        .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
+        .catch(e => setResult(e || 'No QR code found.'));
 })

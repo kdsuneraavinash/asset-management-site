@@ -8,7 +8,7 @@ function setResult(result) {
 }
 
 $("#inputGroupFile").on("change", function (v) {
-    const file = $("#inputGroupFile").files[0];
+    const file = this.files[0];
     if (!file) {
         return;
     }

@@ -59,10 +59,14 @@
         </div>
     </div>
 
-    <button type="button" data-toggle="tooltip" data-placement="left" title="Scan QR Code" class="btn btn-primary kc_fab_main_btn"
-        onclick="console.log('FAB Tapped');"><i class="fa fa-qrcode"></i></button>
-
     {% include('js-loader.htm') %}
+
+    <button type="button" data-toggle="tooltip" data-placement="left" title="Scan QR Code" class="btn btn-primary kc_fab_main_btn"
+        onclick="$('#myModal').modal('show');$('#inputGroupFile').click();"><i class="fa fa-qrcode"></i></button>
+
+
+    {% include('qrscanner.htm') %}
+
 
     <script>
         $(document).ready(function () {

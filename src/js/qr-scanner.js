@@ -204,6 +204,6 @@ export default class QrScanner {
     }
 }
 QrScanner.DEFAULT_CANVAS_SIZE = 400;
-QrScanner.WORKER_PATH = "/libraries/qr-scanner/qr-scanner-worker.min.js";
+QrScanner.WORKER_PATH = "./js/qr-scanner-worker.js";
 
 //# sourceMappingURL=qr-scanner.min.js.map

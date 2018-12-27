@@ -13,6 +13,6 @@ $("#inputGroupFile").on("change", function (v) {
         return;
     }
     QrScanner.scanImage(file)
-        .then(result => setResult(fileQrResult, result))
+        .then(result => setResult(result))
         .catch(e => setResult(e || 'No QR code found.'));
 })

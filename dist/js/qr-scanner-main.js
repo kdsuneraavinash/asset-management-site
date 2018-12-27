@@ -2,7 +2,7 @@ import QrScanner from "./qr-scanner.js";
 
 function setResult(result) {
     console.log("Result: " + result);
-    $('#cam-qr-result').val(result);
+    $('.cam-qr-result').val(result);
     $('#qr-submit').prop('disabled', false);
 
 }

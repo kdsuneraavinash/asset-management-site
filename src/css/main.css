@@ -5,10 +5,10 @@
   border: none;
 }
 
-#sign-in-card > .card-header,
-#sign-in-card > .card-footer,
-#qrscan-card > .card-header,
-#qrscan-card > .card-footer{
+#sign-in-card>.card-header,
+#sign-in-card>.card-footer,
+#qrscan-card>.card-header,
+#qrscan-card>.card-footer {
   background-color: #512DA8;
 }
 
@@ -55,23 +55,23 @@ Sidebar
 
 @media screen and (max-width: 1000px) {
   .sidenav {
-      position: relative;
-      margin-top: -20px;
-      padding-top: 30px;
-      padding-bottom: 10px;
-      width: 100%;
-      height: 30%;
-      bottom: 0;
-      overflow-x: hidden;
+    position: relative;
+    margin-top: -20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    overflow-x: hidden;
   }
 
   #searchNowButton {
-      display: inline-block;
+    display: inline-block;
   }
 
   .main {
-      width: 100%;
-      margin: 0;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -109,7 +109,7 @@ FAB
 
 @media screen and (max-width: 900px) {
   .kc_fab_main_btn {
-      display: block;
+    display: block;
   }
 }
 
@@ -119,7 +119,21 @@ QR READER
 -----------------------------------------------
 */
 
-#camera-card{
+#camera-card {
   margin: auto auto;
   border: none;
+}
+
+/*
+-----------------------------------------------
+CHECKLIST
+-----------------------------------------------
+*/
+
+#checklist-card>div.checked {
+  font-weight: 500;
+}
+
+#checklist-card>div {
+  font-weight: 400;
 }

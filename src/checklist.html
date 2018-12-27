@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.htm' %}
+
+<body>
+    {% include 'sidenav.htm' %}
+
+    <!-- Page Content -->
+    <div class="container-fluid main body-content pt-4 pb-5">
+        <div class="bg-light content p-4">
+            <div>
+                <form action="schedule.html" method="get">
+                    <h4>
+                        Name: <b>AHU4</b>
+                    </h4>
+
+                    <h5>Main Asset: <b>AC</b></h5>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card mt-3">
+                                <div class="card-header bg-dark">
+                                    <h5 class="card-title text-white">Checklist for this asset</h5>
+                                </div>
+                                <div class="card-body" id="checklist-card">
+
+                                    {% for i in range(10) %}
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input todo-check" type="checkbox" value="{{i}}" id="check{{i}}" name="check{{i}}">
+                                            <label class="form-check-label" for="check{{i}}">
+                                                Change {{i}} alignment and color {{i**2}} with our {{i**3}} utilities
+                                                and
+                                                color utilities.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card mt-3">
+                                <div class="card-header bg-dark">
+                                    <h5 class="card-title text-white">Comments</h5>
+                                </div>
+                                <div class="card-body" id="checklist-card">
+
+                                    <div class="form-group">
+                                        <label for="comments">Type in comments (if any)</label>
+                                        <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card mt-3">
+                                <div class="card-header bg-dark">
+                                    <h5 class="card-title text-white">Special Remarks</h5>
+                                </div>
+                                <div class="card-body" id="checklist-card">
+
+                                    <div class="form-group">
+                                        <label for="remarks">Type in your special remarks (if any)</label>
+                                        <textarea class="form-control" id="remarks" name="remarks" rows="3"></textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <hr />
+
+                    <div class="row pt-4">
+                        <div class="col-12 text-right">
+                            <button class="btn btn-warning btn-lg" type="submit"><i class="fas fa-save"></i>&nbsp;Save</i></button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        {% include('js-loader.htm') %}
+
+</body>
+
+</html>

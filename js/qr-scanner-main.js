@@ -7,6 +7,12 @@ function setResult(result) {
 
 }
 
-const video = document.getElementById('qr-video');
-const scanner = new QrScanner(video, result => setResult(result));
-scanner.start();
+fileSelector.addEventListener('change', event => {
+    const file = fileSelector.files[0];
+    if (!file) {
+        return;
+    }
+    QrScanner.scanImage(file)
+        .then(result => setResult(fileQrResult, result))
+        .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
+});

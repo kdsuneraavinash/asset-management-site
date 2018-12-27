@@ -1,6 +1,4 @@
-import QrScanner from "./qr-scanner.min.js";
-
-QrScanner.WORKER_PATH = "./qr-scanner-worker.min.js";
+import QrScanner from "./qr-scanner.js";
 
 function setResult(result) {
     console.log("Result: " + result);

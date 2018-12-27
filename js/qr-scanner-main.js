@@ -7,7 +7,7 @@ function setResult(result) {
 
 }
 
-$("#inputGroupFile").addEventListener('change', event => {
+$("#inputGroupFile").on("change", function (v) {
     const file = $("#inputGroupFile").files[0];
     if (!file) {
         return;
@@ -15,4 +15,4 @@ $("#inputGroupFile").addEventListener('change', event => {
     QrScanner.scanImage(file)
         .then(result => setResult(fileQrResult, result))
         .catch(e => setResult(fileQrResult, e || 'No QR code found.'));
-});
+})

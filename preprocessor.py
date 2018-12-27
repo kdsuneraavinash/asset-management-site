@@ -83,8 +83,8 @@ class Functions:
     @staticmethod
     def found_js(file):
         Functions._map_file_content(file, ".js")
-        Functions.block_printing(
-            css_html_js_minify.process_single_js_file, file, overwrite=True)
+        # Functions.block_printing(
+        #     css_html_js_minify.process_single_js_file, file, overwrite=True)
 
     @staticmethod
     def found_other(file):

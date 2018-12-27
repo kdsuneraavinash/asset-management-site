@@ -7,8 +7,8 @@ function setResult(result) {
 
 }
 
-fileSelector.addEventListener('change', event => {
-    const file = fileSelector.files[0];
+$("#inputGroupFile").addEventListener('change', event => {
+    const file = $("#inputGroupFile").files[0];
     if (!file) {
         return;
     }

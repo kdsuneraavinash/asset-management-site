@@ -17,33 +17,31 @@
         crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-
-    <title>Hello, world!</title>
 </head>
 
 <body>
     <div class="sidenav text-white px-2 text-center">
-        <div class="py-3">
-            <img src="https://ui-avatars.com/api/?name=John+Doe&size=96" class="img rounded-circle">
-        </div>
-        <p>
-            You are logged in as John Doe
-            <br />
-            <br />
-            Press the Logout button to sign out of this site.
-        </p>
-
-        <form action="login.html" method="get">
-            <button class="btn btn-warning" type="submit"><i class="fas fa-sign-out-alt"></i>&nbsp;Sign Out</i></button>
-        </form>
-
-
+    <div class="py-3">
+        <img src="https://ui-avatars.com/api/?name=John+Doe&size=96" class="img rounded-circle">
     </div>
+    <p>
+        You are logged in as John Doe
+        <br />
+        <br />
+        Press the Logout button to sign out of this site.
+    </p>
+
+    <form action="index.html" method="get">
+        <button class="btn btn-warning" type="submit"><i class="fas fa-sign-out-alt"></i>&nbsp;Sign Out</i></button>
+    </form>
+
+
+</div>
 
     <!-- Page Content -->
     <div class="container-fluid main body-content pt-4 pb-5">
         <div class="bg-light content p-4">
-            <div id="send_otp">
+            <div>
                 <h1>Schedule (Daily)</h1>
                 <hr>
                 <p>
@@ -771,14 +769,78 @@
         </div>
     </div>
 
-    <button type="button" data-toggle="tooltip" data-placement="left" title="Scan QR Code" class="btn btn-primary kc_fab_main_btn"
-        onclick="console.log('FAB Tapped');"><i class="fa fa-qrcode"></i></button>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/2.1.2/jquery.floatThead.min.js"></script>
 <script src="https://dmla.github.io/jsqrcode/src/qr_packed.js"></script>
 <script src="js/main.js"></script>
+
+    <button type="button" data-toggle="tooltip" data-placement="left" title="Scan QR Code" class="btn btn-primary kc_fab_main_btn"
+        onclick="$('#myModal').modal('show');$('#inputGroupFile').click();"><i class="fa fa-qrcode"></i></button>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Scan for QR Code</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+
+            <div class="modal-body">
+                <form action="checklist.html" class="pt-3" method="get">
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-primary text-white" id="inputGroupFileAddon">Upload</span>
+                            </div>
+                            <div class="custom-file">
+
+                                <input name="qr-file" type="file" class="custom-file-input" id="inputGroupFile"
+                                    aria-describedby="inputGroupFileAddon" accept="image/*" capture="camera">
+                                <label class="custom-file-label" id="file-label" for="inputGroupFile">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Detected QR code</div>
+                            </div>
+                            <input type="text" name="qr" id="cam-qr-result" class="form-control bg-white" disabled>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="text-right">
+                        <button class="btn btn-warning" id="qr-submit" disabled><i class="fas fa-check-circle"></i>&nbsp;Submit</i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#inputGroupFile").on("change", function (v) {
+            $("#file-label").text(this.files[0].name);
+        })
+    </script>
+
+<script type="module" src="js/qr-scanner-main.js"></script>
+
 
     <script>
         $(document).ready(function () {

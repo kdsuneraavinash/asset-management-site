@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -18,75 +17,43 @@
         crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-
-    <title>Hello, world!</title>
 </head>
-
-<style>
-    #camera-card{
-        margin: auto auto;
-        border: none;
-
-    }
-</style>
-
 
 <body>
     <section class="d-flex p-3">
-        <div class="card align-self-center p-4" id="camera-card">
+        <form class="card align-self-center" id="sign-in-card" action="schedule.html" method="get">
+            <div class="card-header">
+                <h5 class="card-title text-white">Sign in</h5>
+                <h6 class="card-subtitle mb-2 text-small text-white">Asset Manager</h6>
+            </div>
 
-            <h1>Scan for QR Code</h1>
-
-            <form action="#" class="pt-3" method="get">
-
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text bg-primary text-white" id="inputGroupFileAddon">Upload</span>
-                        </div>
-                        <div class="custom-file">
-
-                            <input type="file" class="custom-file-input" id="inputGroupFile" aria-describedby="inputGroupFileAddon"
-                                accept="image/*" capture="camera">
-                            <label class="custom-file-label" id="file-label" for="inputGroupFile">Choose file</label>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="card-body">
 
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <div class="input-group-text">Detected QR code</div>
+                            <div class="input-group-text"><i class="fas fa-user-tie"></i></div>
                         </div>
-                        <input type="text" name="qr" id="cam-qr-result" class="form-control bg-white" disabled>
+                        <input type="text" class="form-control" id="signInUserName" placeholder="Username" name="username">
                     </div>
                 </div>
 
-                <hr>
-
-                <div class="text-right">
-                    <button class="btn btn-warning" id="qr-submit" disabled><i class="fas fa-check-circle"></i>&nbsp;Submit</i></button>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                        </div>
+                        <input type="password" class="form-control" id="signInPassword" placeholder="Password" name="password">
+                    </div>
                 </div>
-            </form>
-        </div>
+
+            </div>
+
+            <div class="card-footer text-right">
+                <button class="btn btn-warning" type="submit"><i class="fas fa-sign-in-alt"></i>&nbsp;Sign In</i></button>
+            </div>
+        </form>
     </section>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/2.1.2/jquery.floatThead.min.js"></script>
-    <script src="https://dmla.github.io/jsqrcode/src/qr_packed.js"></script>
-    <script src="js/main.js"></script>
-
-    <script>
-        $("#inputGroupFile").on("change", function (v) {
-            $("#file-label").text(this.files[0].name);
-        })
-    </script>
-
-    <script type="module" src="js/qr-scanner-main.js"></script>
-
 </body>
 
 </html>

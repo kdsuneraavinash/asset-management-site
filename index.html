@@ -27,23 +27,42 @@
         width: 450px !important;
         height: auto !important;
     }
+
+    #camera-card{
+        margin: auto auto;
+        border: none;
+
+    }
 </style>
 
 
 <body>
     <section class="d-flex p-3">
-        <div class="card align-self-center" id="sign-in-card" action="#" method="get">
+        <div class="card align-self-center p-4" id="camera-card">
 
-            <h1>Scan from WebCam:</h1>
+            <h1>Scan for QR Code</h1>
 
             <div>
                 <video muted autoplay playsinline id="qr-video"></video>
             </div>
 
-            <b>Detected QR code: </b>
-            <span id="cam-qr-result">None</span>
-            <hr>
-            
+            <form action="#" method="get">
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Detected QR code</div>
+                        </div>
+                        <input type="text" name="qr" id="cam-qr-result" class="form-control bg-white" disabled>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="text-right">
+                    <button class="btn btn-warning" id="qr-submit" disabled><i class="fas fa-check-circle"></i>&nbsp;Submit</i></button>
+                </div>
+            </form>
         </div>
     </section>
 

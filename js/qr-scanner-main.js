@@ -1,13 +1,12 @@
 import QrScanner from "./qr-scanner.min.js";
 
-const video = document.getElementById('qr-video');
-const camQrResult = document.getElementById('cam-qr-result');
-
-function setResult(label, result) {
-    console.log("Label: " + label);
+function setResult(result) {
     console.log("Result: " + result);
+    $('#cam-qr-result').val(result);
+    $('#qr-submit').prop('disabled', false);
 
 }
 
-const scanner = new QrScanner(video, result => setResult(camQrResult, result));
+const video = document.getElementById('qr-video');
+const scanner = new QrScanner(video, result => setResult(result));
 scanner.start();

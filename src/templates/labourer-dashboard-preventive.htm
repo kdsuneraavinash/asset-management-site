@@ -1,0 +1,48 @@
+<form action="labourer-schedule.html" method="get">
+    <h4>
+        Name: <b>AHU4</b>
+    </h4>
+
+    <h5>Main Asset: <b>AC</b></h5>
+    <hr>
+
+    <div class="row">
+
+        <!-- Checklist -->
+        <div class="col-lg-6">
+            {% call macro.dashboard_card('Checklist for this asset') %}
+            {% for i in range(10) %}
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input todo-check" value="{{i}}" id="check{{i}}-preventive"
+                    name="check{{i}}">
+                <label class="custom-control-label" for="check{{i}}-preventive">
+                    Change {{i}} alignment and color {{i**2}} with our {{i**3}} utilities.</label>
+            </div>
+            {% endfor %}
+            {% endcall %}
+        </div>
+
+        <!-- Description -->
+        <div class="col-lg-6">
+            {% call macro.dashboard_card('Description') %}
+            {{ macro.text_area('Description', 3)}}
+            {% endcall %}
+
+
+            <!-- Attach Photo -->
+            {% call macro.dashboard_card('Attach Photo') %}
+            {{ macro.file_input('photo', 'preventive')}}
+            {% endcall %}
+        </div>
+    </div>
+
+    {{ macro.labourer_spare_parts_table() }}
+
+    <hr />
+
+    <div class="row pt-4">
+        <div class="col-12 text-right">
+            <button class="btn btn-primary btn-lg" type="submit"><i class="fas fa-save"></i>&nbsp;Save</i></button>
+        </div>
+    </div>
+</form>

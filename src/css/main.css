@@ -126,17 +126,3 @@ QR READER
   margin: auto auto;
   border: none;
 }
-
-/*
------------------------------------------------
-CHECKLIST
------------------------------------------------
-*/
-
-#checklist-card>div.checked {
-  font-weight: 500;
-}
-
-#checklist-card>div {
-  font-weight: 400;
-}

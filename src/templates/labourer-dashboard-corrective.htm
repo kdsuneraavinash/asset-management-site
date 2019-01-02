@@ -1,0 +1,46 @@
+<form action="labourer-schedule.html" method="get">
+    <h4>
+        Report A Problem
+    </h4>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- Problem -->
+            {% call macro.dashboard_card('Problem') %}
+            {{ macro.input_box('problem', 'corrective') }}
+            {% endcall %}
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <!-- Status -->
+            {% call macro.dashboard_card('Status') %}
+            {{ macro.radio('status', 'corrective', 'completed', 'Completed')}}
+            {{ macro.radio('status', 'corrective', 'not-completed', 'Not Yet Completed')}}
+            {% endcall %}
+
+            <!-- Attach -->
+            {% call macro.dashboard_card('Attach Photo') %}
+            {{ macro.file_input('photo', 'corrective')}}
+            {% endcall %}
+        </div>
+
+        <div class="col-lg-6">
+            <!-- Description -->
+            {% call macro.dashboard_card('Description') %}
+            {{ macro.text_area('Description', 3)}}
+            {% endcall %}
+        </div>
+
+    </div>
+
+    {{ macro.labourer_spare_parts_table() }}
+
+    <hr />
+
+    {{ macro.save_button() }}
+</form>

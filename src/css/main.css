@@ -1,21 +1,14 @@
 #sign-in-card,
 #qrscan-card {
-  max-width: 300px !important;
+  width: 400px !important;
   margin: auto auto;
-  border: none;
-}
-
-#sign-in-card>.card-header,
-#sign-in-card>.card-footer,
-#qrscan-card>.card-header,
-#qrscan-card>.card-footer {
-  background-color: #512DA8;
 }
 
 body {
-  background-image: url("../assets/background.jpg");
-  background-attachment: fixed;
-  background-size: cover;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+
   overflow-x: hidden;
 }
 

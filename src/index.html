@@ -2,29 +2,6 @@
 <html lang="en">
 {% include 'header.htm' %}
 
-<!-- Macros -->
-{% macro loginInterface(type, icon) -%}
-<div class="md-form needs-validation" id="form-{{type}}">
-    <i class="fas {{icon}} prefix"></i>
-    <input type="text" class="form-control" id="signin-username-{{type}}" name="username">
-    <label for="signin-username-{{type}}">Username</label>
-    <div class="invalid-feedback">
-        Username cannot be empty.
-    </div>
-</div>
-
-<div class="md-form needs-validation">
-    <i class="fas fa-lock prefix"></i>
-    <input type="password" class="form-control" id="signin-password-{{type}}" name="password">
-    <label for="signin-password-{{type}}">Password</label>
-    <div class="invalid-feedback">
-        Password cannot be empty.
-    </div>
-</div>
-
-<input type="text" name="type" value="{{type}}" hidden>
-{%- endmacro %}
-
 <!-- Body -->
 
 <body>
@@ -36,17 +13,8 @@
             <div class="card-header bg-dark">
                 <h3 class="card-title text-white my-2 text-center">Sign in</h3>
 
-                <div class="text-white">
-                    <ul class="nav nav-pills mt-3 nav-justified pills-white" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="pills-manager-tab" data-toggle="pill" href="#pills-manager"
-                                role="tab" aria-controls="pills-manager" aria-selected="true">Managers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="pills-labourer-tab" data-toggle="pill" href="#pills-labourer" role="tab"
-                                aria-controls="pills-labourer" aria-selected="false">Labourers</a>
-                        </li>
-                    </ul>
+                <div class="text-white text-center">
+                        Asset Manager
                 </div>
             </div>
 
@@ -63,12 +31,21 @@
                 </div>
                 {% endif %}
 
-                <div class="tab-content pt-2 pl-1">
-                    <div class="tab-pane fade show active" id="pills-manager" role="tabpanel" aria-labelledby="pills-manager-tab">
-                        {{loginInterface('manager', 'fa-user-tie') }}
+                <div class="md-form needs-validation" id="form">
+                    <i class="fas fa-user prefix"></i>
+                    <input type="text" class="form-control" id="signin-username" name="username">
+                    <label for="signin-username">Username</label>
+                    <div class="invalid-feedback">
+                        Username cannot be empty.
                     </div>
-                    <div class="tab-pane fade show" id="pills-labourer" role="tabpanel" aria-labelledby="pills-labourer-tab">
-                        {{loginInterface('labourer', 'fa-user') }}
+                </div>
+
+                <div class="md-form needs-validation">
+                    <i class="fas fa-lock prefix"></i>
+                    <input type="password" class="form-control" id="signin-password" name="password">
+                    <label for="signin-password">Password</label>
+                    <div class="invalid-feedback">
+                        Password cannot be empty.
                     </div>
                 </div>
 
@@ -89,15 +66,9 @@
         $("form").submit(function (event) {
             var invalid = false;
 
-            if ($("#pills-manager-tab").hasClass('active')) {
-                var form = $("#form-manager");
-                var username = $("#signin-username-manager");
-                var password = $("#signin-password-manager");
-            } else {
-                var form = $("#form-labourer");
-                var username = $("#signin-username-labourer");
-                var password = $("#signin-password-labourer");
-            }
+            var form = $("#form");
+            var username = $("#signin-username");
+            var password = $("#signin-password");
 
             if (username.val() == "") {
                 username.addClass('is-invalid');

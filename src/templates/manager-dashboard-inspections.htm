@@ -10,7 +10,7 @@
 
             {% call macro.dashboard_card('Scan QR Code') %}
             <div class="form-group text-center">
-                <button class="btn btn-secondary" type="button">Scan QR Code</button>
+                <button class="btn btn-secondary" type="button" id="qr-button">Scan QR Code</button>
             </div>
             {% endcall %}
 
@@ -45,8 +45,4 @@
 
         </div>
     </div>
-
-    <hr />
-
-    {{ macro.save_button() }}
 </form>

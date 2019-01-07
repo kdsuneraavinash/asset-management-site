@@ -7,7 +7,7 @@
 
     <!-- Page Content -->
     <div class="container-fluid main body-content pt-lg-4 pb-5">
-        <div class="bg-light content p-4">
+        <div class="white content p-4">
             <div>
                 <h1>Schedule (Daily)</h1>
                 <hr>
@@ -30,8 +30,7 @@
 
                             {% for i in range(100)%}
                             {% set status = (((2**i*213.1312423)%1)*2)|int %}
-                            <tr class="{{['blue-grey darken-2 text-white', ''][not status]}}">
-                                <!--yellow darken-3-->
+                            <tr class="{{['blue-grey lighten-5', ''][not status]}}">
                                 <th scope="row">{{i + 1}}</th>
                                 <td>A/C Machine</td>
                                 <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
@@ -46,29 +45,21 @@
         </div>
     </div>
 
+    <script>
+        function qrCodeScanned(result) {
+            window.location = "labourer-dashboard.html?qr=" + result.code;
+        }
+    </script>
+
+    <button type="button" id="qr-button" class="kc_fab_main_btn light-blue darken-4"><i class="fa fa-qrcode"></i></button>
+
     {% include('js-loader.htm') %}
-
-    <button type="button" id="qr-button" class="kc_fab_main_btn  light-blue darken-4"><i class="fa fa-qrcode"></i></button>
-
-    <div id="qr-screen" class="kc_qr_page_screen  indigo accent-4 jumbotron text-center">
-        <p style="margin-top:30vh;">
-            This is QR Code Scanner Screen.
-            Press OK to be redirected to a sample page.
-        </p>
-        <br />
-        <button class="btn btn-warning" onclick="window.location = 'labourer-dashboard.html'">OK</button>
-    </div>
-
+    {% include('qrscanner.htm') %}
 
     <script>
         $(document).ready(function () {
             $('table').floatThead();
         });
-
-        $('#qr-button').click(function () {
-            $('table').css('display', 'none');
-            $("#qr-screen").css('display', 'block');
-        })
     </script>
 </body>
 

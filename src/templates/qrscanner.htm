@@ -1,57 +1,100 @@
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Scan for QR Code</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-
-            <div class="modal-body">
-                <form action="checklist.html" class="pt-3" method="get">
-
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-primary text-white" id="inputGroupFileAddon">Upload</span>
-                            </div>
-                            <div class="custom-file">
-
-                                <input name="qr-file" type="file" class="custom-file-input" id="inputGroupFile"
-                                    aria-describedby="inputGroupFileAddon" accept="image/*" capture="camera">
-                                <label class="custom-file-label" id="file-label" for="inputGroupFile">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">Detected QR code</div>
-                            </div>
-                            <input type="text" class="form-control bg-white cam-qr-result" disabled>
-                        </div>
-                    </div>
-
-                    <input type="text" name="qr" class="form-control bg-white cam-qr-result" hidden>
-
-                    <hr>
-
-                    <div class="text-right">
-                        <button class="btn btn-warning" id="qr-submit" disabled><i class="fas fa-check-circle"></i>&nbsp;Submit</i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+<div id="qr-screen" class="kc_qr_page_screen bg-dark text-center">
+    <button type="button" id="qr-close-button" class="kc_fab_btn red darken-4"><i class="fa fa-times"></i></button>
+    <canvas id="webcodecam-canvas"></canvas>
+    <div class="scanner-laser laser-rightBottom" style="opacity: 0.5;"></div>
+    <div class="scanner-laser laser-rightTop" style="opacity: 0.5;"></div>
+    <div class="scanner-laser laser-leftBottom" style="opacity: 0.5;"></div>
+    <div class="scanner-laser laser-leftTop" style="opacity: 0.5;"></div>
 </div>
 
-<script>
-    $("#inputGroupFile").on("change", function (v) {
-            $("#file-label").text(this.files[0].name);
-        })
-    </script>
+<script type="text/javascript" src="js/qr-scanner/qrcodelib.js"></script>
+<script type="text/javascript" src="js/qr-scanner/webcodecamjquery.js"></script>
 
-<script type="module" src="js/qr-scanner-main.js"></script>
+
+
+<script type="text/javascript">
+    var qrscreen = $("#qr-screen");
+
+    var args = {
+        DecodeQRCodeRate: 5, // null to disable OR int > 0 !
+        DecodeBarCodeRate: null, // null to disable OR int > 0 !
+        successTimeout: 500, // delay time when decoding is succeed
+        codeRepetition: true, // accept code repetition true or false
+        tryVertical: true, // try decoding vertically positioned barcode true or false
+        frameRate: 15, // 1 - 25
+        constraints: { // default constraints
+            video: {
+                mandatory: {
+                    maxWidth: 1280,
+                    maxHeight: 720
+                },
+                optional: [{
+                    sourceId: true
+                }]
+            },
+            audio: false
+        },
+        flipVertical: false, // boolean
+        flipHorizontal: false, // boolean
+        zoom: -1, // if zoom = -1, auto zoom for optimal resolution else int
+        beep: 'audio/beep.mp3', // string, audio file location
+        decoderWorker: 'js/qr-scanner/DecoderWorker.js', // string, DecoderWorker file location
+        brightness: 0, // int
+        autoBrightnessValue: false, // functional when value autoBrightnessValue is int
+        grayScale: false, // boolean
+        contrast: 0, // int
+        threshold: 0, // int 
+        sharpness: [], // to On declare matrix, example for sharpness ->  [0, -1, 0, -1, 5, -1, 0, -1, 0]
+        resultFunction: qrCodeScanned,
+        cameraSuccess: function (stream) { //callback funtion to camera success
+            console.log('cameraSuccess');
+        },
+        canPlayFunction: function () { //callback funtion to can play
+            console.log('canPlayFunction');
+        },
+        getDevicesError: function (error) { //callback funtion to get Devices error
+            console.log(error);
+        },
+        getUserMediaError: function (error) { //callback funtion to get usermedia error
+            console.log(error);
+        },
+        cameraError: function (error) { //callback funtion to camera error  
+            console.log(error);
+        }
+    };
+
+
+    var canvas = $("#webcodecam-canvas");
+    var decoder = canvas.WebCodeCamJQuery(args).data().plugin_WebCodeCamJQuery;
+
+    window.setInterval(function () {
+        var x_margin = canvas.css('margin').split(" ")[1];
+        var y_margin = canvas.css('margin').split(" ")[0];
+
+        $(".laser-rightBottom").css('bottom', y_margin);
+        $(".laser-rightBottom").css('right', x_margin);
+
+        $(".laser-leftBottom").css('bottom', y_margin);
+        $(".laser-leftBottom").css('left', x_margin);
+
+        $(".laser-rightTop").css('top', y_margin);
+        $(".laser-rightTop").css('right', x_margin);
+
+        $(".laser-leftTop").css('top', y_margin);
+        $(".laser-leftTop").css('left', x_margin);
+
+
+    }, 1000)
+
+    $('#qr-button').click(function () {
+        qrscreen.css('display', 'block');
+        $('#qr-button').css('visibility', 'hidden');
+        decoder.buildSelectMenu(document.createElement('select'), 'environment|back').init().play();
+    })
+
+    $('#qr-close-button').click(function () {
+        qrscreen.css('display', 'none');
+        $('#qr-button').css('visibility', 'visible');
+        decoder.stop();
+    })
+</script>

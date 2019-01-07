@@ -87,6 +87,7 @@ QR Read Button and Screen
   color: #FFF;
   font-size: 54px;
   transition: .3s;
+  z-index: 10010;
 }
 
 @media screen and (max-width: 900px) {
@@ -97,23 +98,29 @@ QR Read Button and Screen
 }
 
 
-.kc_qr_page_screen {
-  left: 20%;
-  width: 80%;
+.kc_fab_btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: 24px;
+  z-index: 999;
+  border-radius: 100%;
+}
+
+#qr-screen {
   height: 100vh;
+  width: 100vw;
   position: fixed;
   right: 0;
   top: 0;
   color: #FFF;
-  transition: .3s;
   display: none;
-}
-
-@media screen and (max-width: 900px) {
-  .kc_qr_page_screen {
-    left: 0;
-    width: 100%;
-  }
+  z-index: 1015;
 }
 
 /*
@@ -125,4 +132,64 @@ QR READER
 #camera-card {
   margin: auto auto;
   border: none;
+}
+
+canvas {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+}
+
+
+.scanner-laser {
+  position: absolute;
+  margin: 40px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.5;
+  z-index: 998;
+}
+
+.laser-leftTop {
+  border-top: solid red 3px;
+  border-left: solid red 3px;
+}
+
+.laser-leftBottom {
+  border-bottom: solid red 3px;
+  border-left: solid red 3px;
+}
+
+.laser-rightTop {
+  border-top: solid red 3px;
+  border-right: solid red 3px;
+}
+
+.laser-rightBottom {
+  border-bottom: solid red 3px;
+  border-right: solid red 3px;
+}
+
+/*
+-----------------------------------------------
+SROLLBAR
+-----------------------------------------------
+*/
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #cccccc;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1c2331;
+  outline: 1px solid #000000;
 }

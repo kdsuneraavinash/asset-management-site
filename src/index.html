@@ -12,24 +12,18 @@
             <!-- Card Header -->
             <div class="card-header bg-dark">
                 <h3 class="card-title text-white my-2 text-center">Sign in</h3>
-
-                <div class="text-white text-center">
-                    Asset Manager
-                </div>
             </div>
 
             <!-- Card Body -->
             <div class="card-body">
 
-                {% if (false) %}
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger" role="alert" style="display: none;" id="err-message">
                     Wrong login credentials. Incorrect <b>username</b> or <b>password</b>.
                 </div>
-                {% else %}
-                <div class="alert alert-info" role="alert">
-                    Enter your <b>username</b> and <b>password</b> to login into your account.
+
+                <div class="alert alert-info" role="alert" style="display: block;" id="info-message">
+                    Enter your correct <b>username</b> and <b>password</b> to login into your account.
                 </div>
-                {% endif %}
 
                 <div class="md-form needs-validation" id="form">
                     <i class="fas fa-user prefix"></i>
@@ -53,10 +47,7 @@
 
             <!-- Card Footer -->
             <div class="card-footer text-right bg-dark">
-                <button class="btn btn-white text-center" type="submit"><i class="fas fa-sign-in-alt"></i>&nbsp;Sign In
-                    - Labourer</i></button>
-                <br />
-                <button class="btn btn-link btn-sm text-center" onclick="window.location = 'manager-dashboard.html'"><i class="fas fa-sign-in-alt"></i>&nbsp;Sign In - Manager (Temp)</i></button>
+                <button class="btn btn-white text-center" type="submit"><i class="fas fa-sign-in-alt"></i>&nbsp;Sign In</i></button>
             </div>
         </form>
     </section>
@@ -86,7 +77,34 @@
                 event.preventDefault();
                 event.stopPropagation();
             }
+
+
+            var logged = logIn(username.val(), password.val());
+
+            event.preventDefault();
+            event.stopPropagation();
         });
+
+
+
+        /*
+        =====================REMOVE THIS LATER========================
+        */
+
+        function logIn(username, password) {
+            if (username == 'lab' && password == 'lpassword') {
+                window.location = 'labourer-schedule.html';
+            } else if (username == 'manager' && password == 'mpassword') {
+                window.location = 'manager-dashboard.html';
+            } else {
+                $("#info-message").css('display', 'none');
+                $("#err-message").css('display', 'block');
+            }
+        }
+
+        /*
+        ==============================================================
+        */
     </script>
 
 </body>

@@ -70,7 +70,7 @@
             <div class="tab-content pt-2 pl-1" id="pills-tabContent">
 
                 <div class="tab-pane fade show active" id="pills-activities" role="tabpanel" aria-labelledby="pills-activities-tab">
-                    <form action="labourer-schedule.html" method="get">
+                    <form action="manager-dashboard.html" method="get">
     <h4>
         All Queued Activities.
     </h4>
@@ -82,8 +82,8 @@
 
             <!-- Activities Table -->
             <div class="card mt-3">
-    <div class="card-header info-color">
-        <h5 class="card-title text-white">Activity Table</h5>
+    <div class="card-header blue-grey darken-2">
+        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Activity Table</h5>
     </div>
     <div class="card-body">
         
@@ -107,21 +107,21 @@
                             <td>Corrective</td>
                             <td>A/C Machine</td>
                             <td>
-
+                                <input type="text" id="activity-0" name="activity-0" value="0" hidden>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-default btn-sm activity-sel activity-sel-0"
+                                <button onclick="$('#activity-0').val('0')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-0"
                                     id="activity-sel-0">1</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
+                                <button onclick="$('#activity-0').val('1')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
                                     id="activity-sel-0-">2</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
+                                <button onclick="$('#activity-0').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
                                     id="activity-sel-0--">3</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
+                                <button onclick="$('#activity-0').val('3')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
                                     id="activity-sel-0---">4</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
+                                <button onclick="$('#activity-0').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
                                     id="activity-sel-0----">5</button>
                                 
                             </td>
@@ -133,21 +133,21 @@
                             <td>Preventive</td>
                             <td>A/C Machine</td>
                             <td>
-
+                                <input type="text" id="activity-1" name="activity-1" value="1" hidden>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
+                                <button onclick="$('#activity-1').val('0')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
                                     id="activity-sel-1">1</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-default btn-sm activity-sel activity-sel-1"
+                                <button onclick="$('#activity-1').val('1')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-1"
                                     id="activity-sel-1-">2</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
+                                <button onclick="$('#activity-1').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
                                     id="activity-sel-1--">3</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
+                                <button onclick="$('#activity-1').val('3')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
                                     id="activity-sel-1---">4</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
+                                <button onclick="$('#activity-1').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
                                     id="activity-sel-1----">5</button>
                                 
                             </td>
@@ -159,21 +159,21 @@
                             <td>Corrective</td>
                             <td>A/C Machine</td>
                             <td>
-
+                                <input type="text" id="activity-2" name="activity-2" value="0" hidden>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-default btn-sm activity-sel activity-sel-2"
+                                <button onclick="$('#activity-2').val('0')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-2"
                                     id="activity-sel-2">1</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
+                                <button onclick="$('#activity-2').val('1')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
                                     id="activity-sel-2-">2</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
+                                <button onclick="$('#activity-2').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
                                     id="activity-sel-2--">3</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
+                                <button onclick="$('#activity-2').val('3')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
                                     id="activity-sel-2---">4</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
+                                <button onclick="$('#activity-2').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
                                     id="activity-sel-2----">5</button>
                                 
                             </td>
@@ -185,21 +185,21 @@
                             <td>Preventive</td>
                             <td>A/C Machine</td>
                             <td>
-
+                                <input type="text" id="activity-3" name="activity-3" value="3" hidden>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
+                                <button onclick="$('#activity-3').val('0')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
                                     id="activity-sel-3">1</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
+                                <button onclick="$('#activity-3').val('1')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
                                     id="activity-sel-3-">2</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
+                                <button onclick="$('#activity-3').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
                                     id="activity-sel-3--">3</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-default btn-sm activity-sel activity-sel-3"
+                                <button onclick="$('#activity-3').val('3')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-3"
                                     id="activity-sel-3---">4</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
+                                <button onclick="$('#activity-3').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
                                     id="activity-sel-3----">5</button>
                                 
                             </td>
@@ -211,21 +211,21 @@
                             <td>Corrective</td>
                             <td>A/C Machine</td>
                             <td>
-
+                                <input type="text" id="activity-4" name="activity-4" value="0" hidden>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-default btn-sm activity-sel activity-sel-4"
+                                <button onclick="$('#activity-4').val('0')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-4"
                                     id="activity-sel-4">1</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
+                                <button onclick="$('#activity-4').val('1')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
                                     id="activity-sel-4-">2</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
+                                <button onclick="$('#activity-4').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
                                     id="activity-sel-4--">3</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
+                                <button onclick="$('#activity-4').val('3')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
                                     id="activity-sel-4---">4</button>
                                 
-                                <button onclick="javascript:void(0);" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
+                                <button onclick="$('#activity-4').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
                                     id="activity-sel-4----">5</button>
                                 
                             </td>
@@ -252,7 +252,7 @@
 </form>
                 </div>
                 <div class="tab-pane fade" id="pills-preventive" role="tabpanel" aria-labelledby="pills-preventive-tab">
-                    <form action="labourer-schedule.html" method="get">
+                    <form action="manager-dashboard.html" method="get">
     <h4>
         All Queued Equipments.
     </h4>
@@ -264,8 +264,8 @@
 
             <!-- Equipments Table -->
             <div class="card mt-3">
-    <div class="card-header info-color">
-        <h5 class="card-title text-white">Equipments Table</h5>
+    <div class="card-header blue-grey darken-2">
+        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Equipments Table</h5>
     </div>
     <div class="card-body">
         
@@ -288,8 +288,13 @@
                             <td>Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-0" name="preventive-0" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '0')" class="btn btn-success btn-sm" id="preventive-0-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '0')" class="btn btn-danger btn-sm" id="preventive-0-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -300,8 +305,13 @@
                             <td>Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-1" name="preventive-1" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '1')" class="btn btn-success btn-sm" id="preventive-1-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '1')" class="btn btn-danger btn-sm" id="preventive-1-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -312,8 +322,13 @@
                             <td>Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-2" name="preventive-2" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '2')" class="btn btn-success btn-sm" id="preventive-2-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '2')" class="btn btn-danger btn-sm" id="preventive-2-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -324,8 +339,13 @@
                             <td>Not yet Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-3" name="preventive-3" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '3')" class="btn btn-success btn-sm" id="preventive-3-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '3')" class="btn btn-danger btn-sm" id="preventive-3-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -336,8 +356,13 @@
                             <td>Not yet Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-4" name="preventive-4" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '4')" class="btn btn-success btn-sm" id="preventive-4-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '4')" class="btn btn-danger btn-sm" id="preventive-4-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -354,10 +379,15 @@
     </div>
 
     <hr />
+    <div class="row pt-4">
+    <div class="col-12 text-right">
+        <button class="btn btn-primary btn-lg" type="submit"><i class="fas fa-save"></i>&nbsp;Save</i></button>
+    </div>
+</div>
 </form>
                 </div>
                 <div class="tab-pane fade" id="pills-corrective" role="tabpanel" aria-labelledby="pills-corrective-tab">
-                    <form action="labourer-schedule.html" method="get">
+                    <form action="manager-dashboard.html" method="get">
     <h4>
         All Queued Equipments.
     </h4>
@@ -369,8 +399,8 @@
 
             <!-- Equipments Table -->
             <div class="card mt-3">
-    <div class="card-header info-color">
-        <h5 class="card-title text-white">Equipments Table</h5>
+    <div class="card-header blue-grey darken-2">
+        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Equipments Table</h5>
     </div>
     <div class="card-body">
         
@@ -393,8 +423,13 @@
                             <td>Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-0" name="preventive-0" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '0')" class="btn btn-success btn-sm" id="preventive-0-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '0')" class="btn btn-danger btn-sm" id="preventive-0-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -405,8 +440,13 @@
                             <td>Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-1" name="preventive-1" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '1')" class="btn btn-success btn-sm" id="preventive-1-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '1')" class="btn btn-danger btn-sm" id="preventive-1-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -417,8 +457,13 @@
                             <td>Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-2" name="preventive-2" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '2')" class="btn btn-success btn-sm" id="preventive-2-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '2')" class="btn btn-danger btn-sm" id="preventive-2-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -429,8 +474,13 @@
                             <td>Not yet Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-3" name="preventive-3" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '3')" class="btn btn-success btn-sm" id="preventive-3-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '3')" class="btn btn-danger btn-sm" id="preventive-3-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -441,8 +491,13 @@
                             <td>Not yet Completed</td>
                             <td>A/C Machine</td>
                             <td>
-                                <button class="btn btn-success btn-sm" type="button">Accept</button>
-                                <button class="btn btn-danger btn-sm" type="button">Decline</button>
+                               
+                                <input type="text" id="preventive-4" name="preventive-4" value="undecided"
+                                    hidden>
+                                <button onclick="setOpacity(true, '4')" class="btn btn-success btn-sm" id="preventive-4-accept"
+                                    type="button">Accept</button>
+                                <button onclick="setOpacity(false, '4')" class="btn btn-danger btn-sm" id="preventive-4-decline"
+                                    type="button">Decline</button>
 
                             </td>
                         </tr>
@@ -459,6 +514,11 @@
     </div>
 
     <hr />
+    <div class="row pt-4">
+    <div class="col-12 text-right">
+        <button class="btn btn-primary btn-lg" type="submit"><i class="fas fa-save"></i>&nbsp;Save</i></button>
+    </div>
+</div>
 </form>
                 </div>
                 <div class="tab-pane fade" id="pills-inspection" role="tabpanel" aria-labelledby="pills-inspection-tab">
@@ -473,21 +533,21 @@
         <div class="col-12">
 
             <div class="card mt-3">
-    <div class="card-header info-color">
-        <h5 class="card-title text-white">Scan QR Code</h5>
+    <div class="card-header blue-grey darken-2">
+        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Scan QR Code</h5>
     </div>
     <div class="card-body">
         
             <div class="form-group text-center">
-                <button class="btn btn-secondary" type="button">Scan QR Code</button>
+                <button class="btn btn-secondary" type="button" id="qr-button">Scan QR Code</button>
             </div>
             
     </div>
 </div>
 
             <div class="card mt-3">
-    <div class="card-header info-color">
-        <h5 class="card-title text-white">Maintainence History</h5>
+    <div class="card-header blue-grey darken-2">
+        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Maintainence History</h5>
     </div>
     <div class="card-body">
         
@@ -555,20 +615,18 @@
 
         </div>
     </div>
-
-    <hr />
-
-    <div class="row pt-4">
-    <div class="col-12 text-right">
-        <button class="btn btn-primary btn-lg" type="submit"><i class="fas fa-save"></i>&nbsp;Save</i></button>
-    </div>
-</div>
 </form>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <script>
+        function qrCodeScanned(result) {
+            window.location = "labourer-dashboard.html?qr=" + result.code;
+        }
+    </script>
 
     <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -582,6 +640,106 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/floatthead/2.1.2/jquery.floatThead.min.js"></script>
 <!-- <script src="https://dmla.github.io/jsqrcode/src/qr_packed.js"></script> -->
 <!-- <script src="js/main.js"></script> -->
+    <div id="qr-screen" class="kc_qr_page_screen bg-dark text-center">
+    <button type="button" id="qr-close-button" class="kc_fab_btn red darken-4"><i class="fa fa-times"></i></button>
+    <canvas id="webcodecam-canvas"></canvas>
+    <div class="scanner-laser laser-rightBottom" style="opacity: 0.5;"></div>
+    <div class="scanner-laser laser-rightTop" style="opacity: 0.5;"></div>
+    <div class="scanner-laser laser-leftBottom" style="opacity: 0.5;"></div>
+    <div class="scanner-laser laser-leftTop" style="opacity: 0.5;"></div>
+</div>
+
+<script type="text/javascript" src="js/qr-scanner/qrcodelib.js"></script>
+<script type="text/javascript" src="js/qr-scanner/webcodecamjquery.js"></script>
+
+
+
+<script type="text/javascript">
+    var qrscreen = $("#qr-screen");
+
+    var args = {
+        DecodeQRCodeRate: 5, // null to disable OR int > 0 !
+        DecodeBarCodeRate: null, // null to disable OR int > 0 !
+        successTimeout: 500, // delay time when decoding is succeed
+        codeRepetition: true, // accept code repetition true or false
+        tryVertical: true, // try decoding vertically positioned barcode true or false
+        frameRate: 15, // 1 - 25
+        constraints: { // default constraints
+            video: {
+                mandatory: {
+                    maxWidth: 1280,
+                    maxHeight: 720
+                },
+                optional: [{
+                    sourceId: true
+                }]
+            },
+            audio: false
+        },
+        flipVertical: false, // boolean
+        flipHorizontal: false, // boolean
+        zoom: -1, // if zoom = -1, auto zoom for optimal resolution else int
+        beep: 'audio/beep.mp3', // string, audio file location
+        decoderWorker: 'js/qr-scanner/DecoderWorker.js', // string, DecoderWorker file location
+        brightness: 0, // int
+        autoBrightnessValue: false, // functional when value autoBrightnessValue is int
+        grayScale: false, // boolean
+        contrast: 0, // int
+        threshold: 0, // int 
+        sharpness: [], // to On declare matrix, example for sharpness ->  [0, -1, 0, -1, 5, -1, 0, -1, 0]
+        resultFunction: qrCodeScanned,
+        cameraSuccess: function (stream) { //callback funtion to camera success
+            console.log('cameraSuccess');
+        },
+        canPlayFunction: function () { //callback funtion to can play
+            console.log('canPlayFunction');
+        },
+        getDevicesError: function (error) { //callback funtion to get Devices error
+            console.log(error);
+        },
+        getUserMediaError: function (error) { //callback funtion to get usermedia error
+            console.log(error);
+        },
+        cameraError: function (error) { //callback funtion to camera error  
+            console.log(error);
+        }
+    };
+
+
+    var canvas = $("#webcodecam-canvas");
+    var decoder = canvas.WebCodeCamJQuery(args).data().plugin_WebCodeCamJQuery;
+
+    window.setInterval(function () {
+        var x_margin = canvas.css('margin').split(" ")[1];
+        var y_margin = canvas.css('margin').split(" ")[0];
+
+        $(".laser-rightBottom").css('bottom', y_margin);
+        $(".laser-rightBottom").css('right', x_margin);
+
+        $(".laser-leftBottom").css('bottom', y_margin);
+        $(".laser-leftBottom").css('left', x_margin);
+
+        $(".laser-rightTop").css('top', y_margin);
+        $(".laser-rightTop").css('right', x_margin);
+
+        $(".laser-leftTop").css('top', y_margin);
+        $(".laser-leftTop").css('left', x_margin);
+
+
+    }, 1000)
+
+    $('#qr-button').click(function () {
+        qrscreen.css('display', 'block');
+        $('#qr-button').css('visibility', 'hidden');
+        decoder.buildSelectMenu(document.createElement('select'), 'environment|back').init().play();
+    })
+
+    $('#qr-close-button').click(function () {
+        qrscreen.css('display', 'none');
+        $('#qr-button').css('visibility', 'visible');
+        decoder.stop();
+    })
+</script>
 
     <script>
         $(".activity-sel").click(function (v) {
@@ -600,6 +758,22 @@
             console.log(thisButton)
         })
     </script>
+
+    <script>
+        function setOpacity(accepted, index) {
+            if (accepted) {
+                $('#preventive-' + index).val('accept');
+                $('#preventive-' + index + '-accept').css('opacity', '1');
+                $('#preventive-' + index + '-decline').css('opacity', '0.5');
+            } else {
+                $('#preventive-' + index).val('decline');
+                $('#preventive-' + index + '-accept').css('opacity', '0.5');
+                $('#preventive-' + index + '-decline').css('opacity', '1');
+
+            }
+        }
+    </script>
+    
 </body>
 
 </html>

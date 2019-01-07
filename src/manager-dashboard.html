@@ -40,7 +40,14 @@
         </div>
     </div>
 
+    <script>
+        function qrCodeScanned(result) {
+            window.location = "labourer-dashboard.html?qr=" + result.code;
+        }
+    </script>
+
     {% include('js-loader.htm') %}
+    {% include('qrscanner.htm') %}
 
     <script>
         $(".activity-sel").click(function (v) {
@@ -59,6 +66,22 @@
             console.log(thisButton)
         })
     </script>
+
+    <script>
+        function setOpacity(accepted, index) {
+            if (accepted) {
+                $('#preventive-' + index).val('accept');
+                $('#preventive-' + index + '-accept').css('opacity', '1');
+                $('#preventive-' + index + '-decline').css('opacity', '0.5');
+            } else {
+                $('#preventive-' + index).val('decline');
+                $('#preventive-' + index + '-accept').css('opacity', '0.5');
+                $('#preventive-' + index + '-decline').css('opacity', '1');
+
+            }
+        }
+    </script>
+    
 </body>
 
 </html>

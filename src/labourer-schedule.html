@@ -1,3 +1,11 @@
+{%set activity_id = [0, 1, 2]%}
+
+{%set activity_item = ['', '', '']%}
+{%set activity_item = ['Replace fan belts', 'Clean filters', 'Replace oil filter']%}
+{%set activity_desc = ['AHU1', 'Package type 001', 'Gen set 3'] %}
+{%set activity_type = ['Corrective', 'Preventive', 'Preventive'] %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 {% include 'header.htm' %}
@@ -28,13 +36,12 @@
                         </thead>
                         <tbody>
 
-                            {% for i in range(100)%}
-                            {% set status = (((2**i*213.1312423)%1)*2)|int %}
-                            <tr class="{{['blue-grey lighten-5', ''][not status]}}">
-                                <th scope="row">{{i + 1}}</th>
-                                <td>A/C Machine</td>
-                                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
-                                <td>{{ ["Finished", "In Progress"][status] }}</td>
+                            {% for i in range(activity_id|length)%}
+                            <tr>
+                                <th scope="row">{{activity_id[i]}}</th>
+                                <td>{{activity_item[i]}}</td>
+                                <td>{{activity_desc[i]}}</td>
+                                <td>{{activity_type[i]}}</td>
                             </tr>
                             {% endfor %}
 

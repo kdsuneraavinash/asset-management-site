@@ -1,9 +1,47 @@
+{% set equipment_name="CHILLER/AHU(A/C)" %}
+{% set equipment_no="FS99777" %}
+{% set location="Block 4" %}
+{% set pm_freq="Monthly" %}
+{% set target_start="2018/01/03" %}
+{% set target_end="2018/12/4" %}
+
+{% set checklist = ["Check for any abnormal noise & vibration from the unit",
+"Check for air filter.Cleanwith jet water ,refix the filter when properly dried.",
+"Check for any water leakage from the unit.",
+"Check for any water leakage from piping system.",
+"Thoroughly clean the fan section and fan wheel.",
+"Check the terminals tightness of the motor.",
+"Check & record the motor current & report any abnormalities",
+"Check & adjust the fresh air in take louvers.",
+"Check whether all the door seals are in good condition, replace if necessary.",
+"Check the door inter lock operation",
+"Check the HP/LP reading.",
+"Check oil level.",
+"Check the voltage ,current & frequency.",
+"Check the oil traces on the flare joints.",
+"Check valves, glands & flanges.",
+"Check refrigerant lines & joints.",
+"Check contactor & tightening of cables terminations.",
+"Clean of air cooled condensers."] %}
+
 <form action="labourer-schedule.html" method="get">
     <h4>
-        Name: <b>AHU4</b>
+        Name: <b>{{equipment_name}}</b>
     </h4>
 
-    <h5>Main Asset: <b>AC</b></h5>
+    <hr />
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h5>Equipment No: <b>{{equipment_no}}</b></h5>
+            <h5>Location: <b>{{location}}</b></h5>
+            <h5>PM Frequency: <b>{{pm_freq}}</b></h5>
+        </div>
+        <div class="col-lg-6">
+            <h5>Target Start Date: <b>{{target_start}}</b></h5>
+            <h5>Target date of Completion: <b>{{target_end}}</b></h5>
+        </div>
+    </div>
     <hr>
 
     <div class="row">
@@ -16,16 +54,16 @@
                 <input type="checkbox" class="custom-control-input todo-check" value="{{i}}" id="check{{i}}-preventive"
                     name="check{{i}}">
                 <label class="custom-control-label" for="check{{i}}-preventive">
-                    Change {{i}} alignment and color {{i**2}} with our {{i**3}} utilities.</label>
+                    {{checklist[i]}}</label>
             </div>
             {% endfor %}
             {% endcall %}
         </div>
 
-        <!-- Description -->
+        <!-- Remarks -->
         <div class="col-lg-6">
-            {% call macro.dashboard_card('Description') %}
-            {{ macro.text_area('Description', 3)}}
+            {% call macro.dashboard_card('Remarks') %}
+            {{ macro.text_area('Remarks', 3)}}
             {% endcall %}
 
 
@@ -36,7 +74,16 @@
         </div>
     </div>
 
-    {{ macro.labourer_spare_parts_table() }}
+    {% call macro.dashboard_card('Details') %}
+    <p>Activity Carried By: </p>
+    {{ macro.input_box('activity-carried-by', '')}}
+    <br/>
+    <p>Shift Engineer: </p>
+    {{ macro.input_box('shift-engineer', '')}}
+    <br/>
+    <p>Reviewed By: </p>
+    {{ macro.input_box('reviewed-by', '')}}
+    {% endcall %}
 
     <hr />
 

@@ -1,3 +1,16 @@
+{% set history_date = ["2019/1/3", "2019/1/4", "2019/1/2"] %}
+
+{% set history_type = ['Corrective', 'Corrective', 'Preventive']%}
+
+{% set history_durations = ['6 Weeks', '5 Weeks', '3 Week']%}
+
+{% set technitians = ['Mr. Amal Senewirathne', 'Mr. Senarath Hewawitharana',
+'Mr. Amal Senewirathne'] %}
+
+{% set history_status = ['Completed', 'Completed', 'Completed']%}
+
+{% set history_photo = ['', '', '']%}
+
 <form action="labourer-schedule.html" method="get">
     <h4>
         Inspections History
@@ -24,17 +37,22 @@
                             <th scope="col">Duration</th>
                             <th scope="col">Techincian</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Photo</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        {% for i in range(5)%}
+                        {% for i in range(3)%}
                         <tr>
-                            <td>{{ i%19 + 2000 }}/{{ i%12 }}/{{ i%30 }}</td>
-                            <td>{{['Preventive', 'Corrective'][15%(i+1) == 0]}}</td>
-                            <td>{{10-i}} weeks</td>
-                            <td>Mr. G. O. Rathnayake</td>
-                            <td> {{['Not yet Completed', 'Completed'][6%(i+1) == 0]}} </td>
+                            <td>{{ history_date[i] }}</td>
+                            <td>{{history_type[i]}}</td>
+                            <td>{{history_durations[i]}}</td>
+                            <td>{{technitians[i]}}</td>
+                            <td> {{history_status[i]}} </td>
+                            <td>
+                                <a href="http://ecoshopping-project.eu/wp-content/uploads/2017/06/AHU-1.png" target="_blank"
+                                    class="btn-link">View</a>
+                            </td>
                         </tr>
                         {% endfor %}
 

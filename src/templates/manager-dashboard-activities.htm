@@ -1,3 +1,22 @@
+{% set activity_ids = [0, 1, 2, 3, 4, 5] %}
+
+{% set activities = ['Replace Fan Belts',
+'Clean Filters', 'Replace Oil Filter', 'Clean Cooling Tower',
+'Replace Bulb', 'Daily Maintenance'] %}
+
+{% set activity_desc = ['AHU1',
+'Package type 001', 'Gen set 3', 'Chiller 2',
+'5/A/F11', 'AHU1'] %}
+
+{% set activity_type = ['Corrective',
+'Preventive', 'Preventive', 'Preventive',
+'Corrective', 'Preventive'] %}
+
+
+{% set technitians = ['Mr. Amal Senewirathne', 'Mr. Senarath Hewawitharana',
+'Mr. Sarath Hemal', 'Mr. Bimal Karunathilaka'] %}
+
+
 <form action="manager-dashboard.html" method="get">
     <h4>
         All Queued Activities.
@@ -23,18 +42,20 @@
                     </thead>
                     <tbody>
 
-                        {% for i in range(5)%}
+                        {% for i in range(activity_ids|length)%}
                         <tr>
-                            <td>{{i}}</td>
-                            <td>AHU 1</td>
-                            <td>{{['Preventive', 'Corrective'][15%(i+1) == 0]}}</td>
-                            <td>A/C Machine</td>
+                            <td>{{activity_ids[i]}}</td>
+                            <td>{{activities[i]}}</td>
+                            <td>{{activity_desc[i]}}</td>
+                            <td>{{activity_type[i]}}</td>
                             <td>
-                                <input type="text" id="activity-{{i}}" name="activity-{{i}}" value="{{15%(i+1)}}" hidden>
-                                {% for j in range(5)%}
-                                <button onclick="$('#activity-{{i}}').val('{{j}}')" type="button" class="btn {{['btn-light', 'btn-default'][j==15%(i+1)]}} btn-sm activity-sel activity-sel-{{i}}"
-                                    id="activity-sel-{{i}}{{'-'*j }}">{{j+1}}</button>
-                                {% endfor %}
+                                <!-- Subject -->
+                                <select class="browser-default custom-select" name="tech-{{activity_ids[i]}}">
+                                    <option value="-1" selected>Unselected</option>
+                                    {% for j in range(technitians|length)%}
+                                    <option value="{{j}}">{{technitians[j]}}</option>
+                                    {% endfor %}
+                                </select>
                             </td>
                         </tr>
                         {% endfor %}

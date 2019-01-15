@@ -13,8 +13,7 @@
             <br />
             <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
                 {{ macro.pill('Activities', 'activities', true) }}
-                {{ macro.pill('Preventive', 'preventive', false) }}
-                {{ macro.pill('Corrective', 'corrective', false) }}
+                {{ macro.pill('Parts', 'parts', false) }}
                 {{ macro.pill('Inspection', 'inspection', false) }}
             </ul>
         </div>
@@ -26,11 +25,8 @@
                 <div class="tab-pane fade show active" id="pills-activities" role="tabpanel" aria-labelledby="pills-activities-tab">
                     {% include('manager-dashboard-activities.htm') with context %}
                 </div>
-                <div class="tab-pane fade" id="pills-preventive" role="tabpanel" aria-labelledby="pills-preventive-tab">
-                    {% include('manager-dashboard-preventive.htm') with context %}
-                </div>
-                <div class="tab-pane fade" id="pills-corrective" role="tabpanel" aria-labelledby="pills-corrective-tab">
-                    {% include('manager-dashboard-preventive.htm') with context %}
+                <div class="tab-pane fade" id="pills-parts" role="tabpanel" aria-labelledby="pills-parts-tab">
+                    {% include('manager-dashboard-parts.htm') with context %}
                 </div>
                 <div class="tab-pane fade" id="pills-inspection" role="tabpanel" aria-labelledby="pills-inspection-tab">
                     {% include('manager-dashboard-inspections.htm') with context %}
@@ -48,39 +44,6 @@
 
     {% include('js-loader.htm') %}
     {% include('qrscanner.htm') %}
-
-    <script>
-        $(".activity-sel").click(function (v) {
-            key = this.id;
-            while (key.charAt(key.length - 1) == '-') {
-                key = key.substring(0, key.length - 1);
-            }
-            var targetButtons = $("." + key);
-            targetButtons.removeClass('btn-default');
-            targetButtons.addClass('btn-light');
-
-            var thisButton = $("#" + this.id).first();
-            thisButton.removeClass('btn-light');
-            thisButton.addClass('btn-default');
-
-            console.log(thisButton)
-        })
-    </script>
-
-    <script>
-        function setOpacity(accepted, index) {
-            if (accepted) {
-                $('#preventive-' + index).val('accept');
-                $('#preventive-' + index + '-accept').css('opacity', '1');
-                $('#preventive-' + index + '-decline').css('opacity', '0.5');
-            } else {
-                $('#preventive-' + index).val('decline');
-                $('#preventive-' + index + '-accept').css('opacity', '0.5');
-                $('#preventive-' + index + '-decline').css('opacity', '1');
-
-            }
-        }
-    </script>
     
 </body>
 

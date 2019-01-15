@@ -1,0 +1,75 @@
+{% set activity_ids = [1, 2, 3, 0, 4] %}
+
+{% set activity_status = ["2019/01/22 - 2019/01/25",
+"2019/01/24 - 2019/01/25",
+"01/27/2019",
+"2019/01/21 - 2019/01/22",
+"01/30/2019"] %}
+
+{% set spare_parts = ['Filter cleaning Agent',
+'Oil Filters', 'Water Treeting Chemical', 'V fan belt ',
+'G8 Floricnt Lamp'] %}
+
+{% set quantity = [1, 2, 1, 1, 1]%}
+
+
+<form action="manager-dashboard.html" method="get">
+    <h4>
+        All Queued Equipments.
+    </h4>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-12">
+
+            <!-- Equipments Table -->
+            {% call macro.dashboard_card('Equipments Table') %}
+            <div class="table-responsive">
+                <table class="table text-center">
+                    <thead class="bg-white">
+                        <tr>
+                            <th scope="col">Activity ID#</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Spare Parts</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Actions</th>
+                            <th scope="col">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for i in range(5)%}
+                        <tr>
+                            <td>{{activity_ids[i]}}</td>
+                            <td>{{activity_status[i]}}</td>
+                            <td>{{spare_parts[i]}}</td>
+                            <td>{{quantity[i]}}</td>
+                            <td>
+                                <select class="browser-default custom-select" name="parts-action-{{i}}">
+                                    <option value="undecided" selected>Undecided</option>
+                                    <option value="accepted">Accept</option>
+                                    <option value="declined">Decline</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="browser-default custom-select" name="parts-type-{{i}}">
+                                    <option value="" disabled>Select a Type</option>
+                                    <option value="preventive">Preventive</option>
+                                    <option value="corrective">Corrective</option>
+                                </select>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+            {% endcall %}
+
+        </div>
+    </div>
+
+    <hr />
+    {{ macro.save_button() }}
+</form>

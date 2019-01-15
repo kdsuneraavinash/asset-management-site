@@ -51,12 +51,8 @@
         role="tab" aria-controls="pills-activities" aria-selected="selected|bool">Activities</a>
 </li>
                 <li class="nav-item">
-    <a class="nav-link " id="pills-preventive-tab" data-toggle="pill" href="#pills-preventive"
-        role="tab" aria-controls="pills-preventive" aria-selected="selected|bool">Preventive</a>
-</li>
-                <li class="nav-item">
-    <a class="nav-link " id="pills-corrective-tab" data-toggle="pill" href="#pills-corrective"
-        role="tab" aria-controls="pills-corrective" aria-selected="selected|bool">Corrective</a>
+    <a class="nav-link " id="pills-parts-tab" data-toggle="pill" href="#pills-parts"
+        role="tab" aria-controls="pills-parts" aria-selected="selected|bool">Parts</a>
 </li>
                 <li class="nav-item">
     <a class="nav-link " id="pills-inspection-tab" data-toggle="pill" href="#pills-inspection"
@@ -70,7 +66,19 @@
             <div class="tab-content pt-2 pl-1" id="pills-tabContent">
 
                 <div class="tab-pane fade show active" id="pills-activities" role="tabpanel" aria-labelledby="pills-activities-tab">
-                    <form action="manager-dashboard.html" method="get">
+                    
+
+
+
+
+
+
+
+
+
+
+
+<form action="manager-dashboard.html" method="get">
     <h4>
         All Queued Activities.
     </h4>
@@ -103,131 +111,133 @@
                         
                         <tr>
                             <td>0</td>
-                            <td>AHU 1</td>
+                            <td>Replace Fan Belts</td>
+                            <td>AHU1</td>
                             <td>Corrective</td>
-                            <td>A/C Machine</td>
                             <td>
-                                <input type="text" id="activity-0" name="activity-0" value="0" hidden>
-                                
-                                <button onclick="$('#activity-0').val('0')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-0"
-                                    id="activity-sel-0">1</button>
-                                
-                                <button onclick="$('#activity-0').val('1')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
-                                    id="activity-sel-0-">2</button>
-                                
-                                <button onclick="$('#activity-0').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
-                                    id="activity-sel-0--">3</button>
-                                
-                                <button onclick="$('#activity-0').val('3')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
-                                    id="activity-sel-0---">4</button>
-                                
-                                <button onclick="$('#activity-0').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-0"
-                                    id="activity-sel-0----">5</button>
-                                
+                                <!-- Subject -->
+                                <select class="browser-default custom-select" name="tech-0">
+                                    <option value="-1" selected>Unselected</option>
+                                    
+                                    <option value="0">Mr. Amal Senewirathne</option>
+                                    
+                                    <option value="1">Mr. Senarath Hewawitharana</option>
+                                    
+                                    <option value="2">Mr. Sarath Hemal</option>
+                                    
+                                    <option value="3">Mr. Bimal Karunathilaka</option>
+                                    
+                                </select>
                             </td>
                         </tr>
                         
                         <tr>
                             <td>1</td>
-                            <td>AHU 1</td>
+                            <td>Clean Filters</td>
+                            <td>Package type 001</td>
                             <td>Preventive</td>
-                            <td>A/C Machine</td>
                             <td>
-                                <input type="text" id="activity-1" name="activity-1" value="1" hidden>
-                                
-                                <button onclick="$('#activity-1').val('0')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
-                                    id="activity-sel-1">1</button>
-                                
-                                <button onclick="$('#activity-1').val('1')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-1"
-                                    id="activity-sel-1-">2</button>
-                                
-                                <button onclick="$('#activity-1').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
-                                    id="activity-sel-1--">3</button>
-                                
-                                <button onclick="$('#activity-1').val('3')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
-                                    id="activity-sel-1---">4</button>
-                                
-                                <button onclick="$('#activity-1').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-1"
-                                    id="activity-sel-1----">5</button>
-                                
+                                <!-- Subject -->
+                                <select class="browser-default custom-select" name="tech-1">
+                                    <option value="-1" selected>Unselected</option>
+                                    
+                                    <option value="0">Mr. Amal Senewirathne</option>
+                                    
+                                    <option value="1">Mr. Senarath Hewawitharana</option>
+                                    
+                                    <option value="2">Mr. Sarath Hemal</option>
+                                    
+                                    <option value="3">Mr. Bimal Karunathilaka</option>
+                                    
+                                </select>
                             </td>
                         </tr>
                         
                         <tr>
                             <td>2</td>
-                            <td>AHU 1</td>
-                            <td>Corrective</td>
-                            <td>A/C Machine</td>
+                            <td>Replace Oil Filter</td>
+                            <td>Gen set 3</td>
+                            <td>Preventive</td>
                             <td>
-                                <input type="text" id="activity-2" name="activity-2" value="0" hidden>
-                                
-                                <button onclick="$('#activity-2').val('0')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-2"
-                                    id="activity-sel-2">1</button>
-                                
-                                <button onclick="$('#activity-2').val('1')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
-                                    id="activity-sel-2-">2</button>
-                                
-                                <button onclick="$('#activity-2').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
-                                    id="activity-sel-2--">3</button>
-                                
-                                <button onclick="$('#activity-2').val('3')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
-                                    id="activity-sel-2---">4</button>
-                                
-                                <button onclick="$('#activity-2').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-2"
-                                    id="activity-sel-2----">5</button>
-                                
+                                <!-- Subject -->
+                                <select class="browser-default custom-select" name="tech-2">
+                                    <option value="-1" selected>Unselected</option>
+                                    
+                                    <option value="0">Mr. Amal Senewirathne</option>
+                                    
+                                    <option value="1">Mr. Senarath Hewawitharana</option>
+                                    
+                                    <option value="2">Mr. Sarath Hemal</option>
+                                    
+                                    <option value="3">Mr. Bimal Karunathilaka</option>
+                                    
+                                </select>
                             </td>
                         </tr>
                         
                         <tr>
                             <td>3</td>
-                            <td>AHU 1</td>
+                            <td>Clean Cooling Tower</td>
+                            <td>Chiller 2</td>
                             <td>Preventive</td>
-                            <td>A/C Machine</td>
                             <td>
-                                <input type="text" id="activity-3" name="activity-3" value="3" hidden>
-                                
-                                <button onclick="$('#activity-3').val('0')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
-                                    id="activity-sel-3">1</button>
-                                
-                                <button onclick="$('#activity-3').val('1')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
-                                    id="activity-sel-3-">2</button>
-                                
-                                <button onclick="$('#activity-3').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
-                                    id="activity-sel-3--">3</button>
-                                
-                                <button onclick="$('#activity-3').val('3')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-3"
-                                    id="activity-sel-3---">4</button>
-                                
-                                <button onclick="$('#activity-3').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-3"
-                                    id="activity-sel-3----">5</button>
-                                
+                                <!-- Subject -->
+                                <select class="browser-default custom-select" name="tech-3">
+                                    <option value="-1" selected>Unselected</option>
+                                    
+                                    <option value="0">Mr. Amal Senewirathne</option>
+                                    
+                                    <option value="1">Mr. Senarath Hewawitharana</option>
+                                    
+                                    <option value="2">Mr. Sarath Hemal</option>
+                                    
+                                    <option value="3">Mr. Bimal Karunathilaka</option>
+                                    
+                                </select>
                             </td>
                         </tr>
                         
                         <tr>
                             <td>4</td>
-                            <td>AHU 1</td>
+                            <td>Replace Bulb</td>
+                            <td>5/A/F11</td>
                             <td>Corrective</td>
-                            <td>A/C Machine</td>
                             <td>
-                                <input type="text" id="activity-4" name="activity-4" value="0" hidden>
-                                
-                                <button onclick="$('#activity-4').val('0')" type="button" class="btn btn-default btn-sm activity-sel activity-sel-4"
-                                    id="activity-sel-4">1</button>
-                                
-                                <button onclick="$('#activity-4').val('1')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
-                                    id="activity-sel-4-">2</button>
-                                
-                                <button onclick="$('#activity-4').val('2')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
-                                    id="activity-sel-4--">3</button>
-                                
-                                <button onclick="$('#activity-4').val('3')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
-                                    id="activity-sel-4---">4</button>
-                                
-                                <button onclick="$('#activity-4').val('4')" type="button" class="btn btn-light btn-sm activity-sel activity-sel-4"
-                                    id="activity-sel-4----">5</button>
-                                
+                                <!-- Subject -->
+                                <select class="browser-default custom-select" name="tech-4">
+                                    <option value="-1" selected>Unselected</option>
+                                    
+                                    <option value="0">Mr. Amal Senewirathne</option>
+                                    
+                                    <option value="1">Mr. Senarath Hewawitharana</option>
+                                    
+                                    <option value="2">Mr. Sarath Hemal</option>
+                                    
+                                    <option value="3">Mr. Bimal Karunathilaka</option>
+                                    
+                                </select>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>5</td>
+                            <td>Daily Maintenance</td>
+                            <td>AHU1</td>
+                            <td>Preventive</td>
+                            <td>
+                                <!-- Subject -->
+                                <select class="browser-default custom-select" name="tech-5">
+                                    <option value="-1" selected>Unselected</option>
+                                    
+                                    <option value="0">Mr. Amal Senewirathne</option>
+                                    
+                                    <option value="1">Mr. Senarath Hewawitharana</option>
+                                    
+                                    <option value="2">Mr. Sarath Hemal</option>
+                                    
+                                    <option value="3">Mr. Bimal Karunathilaka</option>
+                                    
+                                </select>
                             </td>
                         </tr>
                         
@@ -251,8 +261,17 @@
 </div>
 </form>
                 </div>
-                <div class="tab-pane fade" id="pills-preventive" role="tabpanel" aria-labelledby="pills-preventive-tab">
-                    <form action="manager-dashboard.html" method="get">
+                <div class="tab-pane fade" id="pills-parts" role="tabpanel" aria-labelledby="pills-parts-tab">
+                    
+
+
+
+
+
+
+
+
+<form action="manager-dashboard.html" method="get">
     <h4>
         All Queued Equipments.
     </h4>
@@ -276,229 +295,116 @@
                             <th scope="col">Activity ID#</th>
                             <th scope="col">Status</th>
                             <th scope="col">Spare Parts</th>
+                            <th scope="col">Quantity</th>
                             <th scope="col">Actions</th>
+                            <th scope="col">Type</th>
                         </tr>
                     </thead>
                     <tbody>
 
                         
                         <tr>
-                            <!--yellow darken-3-->
-                            <td>3</td>
-                            <td>Completed</td>
-                            <td>A/C Machine</td>
+                            <td>1</td>
+                            <td>2019/01/22 - 2019/01/25</td>
+                            <td>Filter cleaning Agent</td>
+                            <td>1</td>
                             <td>
-                               
-                                <input type="text" id="preventive-0" name="preventive-0" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '0')" class="btn btn-success btn-sm" id="preventive-0-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '0')" class="btn btn-danger btn-sm" id="preventive-0-decline"
-                                    type="button">Decline</button>
-
+                                <select class="browser-default custom-select" name="parts-action-0">
+                                    <option value="undecided" selected>Undecided</option>
+                                    <option value="accepted">Accept</option>
+                                    <option value="declined">Decline</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="browser-default custom-select" name="parts-type-0">
+                                    <option value="" disabled>Select a Type</option>
+                                    <option value="preventive">Preventive</option>
+                                    <option value="corrective">Corrective</option>
+                                </select>
                             </td>
                         </tr>
                         
                         <tr>
-                            <!--yellow darken-3-->
                             <td>2</td>
-                            <td>Completed</td>
-                            <td>A/C Machine</td>
-                            <td>
-                               
-                                <input type="text" id="preventive-1" name="preventive-1" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '1')" class="btn btn-success btn-sm" id="preventive-1-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '1')" class="btn btn-danger btn-sm" id="preventive-1-decline"
-                                    type="button">Decline</button>
-
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <!--yellow darken-3-->
-                            <td>4</td>
-                            <td>Completed</td>
-                            <td>A/C Machine</td>
-                            <td>
-                               
-                                <input type="text" id="preventive-2" name="preventive-2" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '2')" class="btn btn-success btn-sm" id="preventive-2-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '2')" class="btn btn-danger btn-sm" id="preventive-2-decline"
-                                    type="button">Decline</button>
-
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <!--yellow darken-3-->
-                            <td>6</td>
-                            <td>Not yet Completed</td>
-                            <td>A/C Machine</td>
-                            <td>
-                               
-                                <input type="text" id="preventive-3" name="preventive-3" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '3')" class="btn btn-success btn-sm" id="preventive-3-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '3')" class="btn btn-danger btn-sm" id="preventive-3-decline"
-                                    type="button">Decline</button>
-
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <!--yellow darken-3-->
-                            <td>9</td>
-                            <td>Not yet Completed</td>
-                            <td>A/C Machine</td>
-                            <td>
-                               
-                                <input type="text" id="preventive-4" name="preventive-4" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '4')" class="btn btn-success btn-sm" id="preventive-4-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '4')" class="btn btn-danger btn-sm" id="preventive-4-decline"
-                                    type="button">Decline</button>
-
-                            </td>
-                        </tr>
-                        
-
-                    </tbody>
-                </table>
-            </div>
-            
-    </div>
-</div>
-
-        </div>
-    </div>
-
-    <hr />
-    <div class="row pt-4">
-    <div class="col-12 text-right">
-        <button class="btn btn-primary btn-lg" type="submit"><i class="fas fa-save"></i>&nbsp;Save</i></button>
-    </div>
-</div>
-</form>
-                </div>
-                <div class="tab-pane fade" id="pills-corrective" role="tabpanel" aria-labelledby="pills-corrective-tab">
-                    <form action="manager-dashboard.html" method="get">
-    <h4>
-        All Queued Equipments.
-    </h4>
-
-    <hr>
-
-    <div class="row">
-        <div class="col-12">
-
-            <!-- Equipments Table -->
-            <div class="card mt-3">
-    <div class="card-header blue-grey darken-2">
-        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Equipments Table</h5>
-    </div>
-    <div class="card-body">
-        
-            <div class="table-responsive">
-                <table class="table text-center">
-                    <thead class="bg-white">
-                        <tr>
-                            <th scope="col">Activity ID#</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Spare Parts</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        
-                        <tr>
-                            <!--yellow darken-3-->
-                            <td>3</td>
-                            <td>Completed</td>
-                            <td>A/C Machine</td>
-                            <td>
-                               
-                                <input type="text" id="preventive-0" name="preventive-0" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '0')" class="btn btn-success btn-sm" id="preventive-0-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '0')" class="btn btn-danger btn-sm" id="preventive-0-decline"
-                                    type="button">Decline</button>
-
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <!--yellow darken-3-->
+                            <td>2019/01/24 - 2019/01/25</td>
+                            <td>Oil Filters</td>
                             <td>2</td>
-                            <td>Completed</td>
-                            <td>A/C Machine</td>
                             <td>
-                               
-                                <input type="text" id="preventive-1" name="preventive-1" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '1')" class="btn btn-success btn-sm" id="preventive-1-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '1')" class="btn btn-danger btn-sm" id="preventive-1-decline"
-                                    type="button">Decline</button>
-
+                                <select class="browser-default custom-select" name="parts-action-1">
+                                    <option value="undecided" selected>Undecided</option>
+                                    <option value="accepted">Accept</option>
+                                    <option value="declined">Decline</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="browser-default custom-select" name="parts-type-1">
+                                    <option value="" disabled>Select a Type</option>
+                                    <option value="preventive">Preventive</option>
+                                    <option value="corrective">Corrective</option>
+                                </select>
                             </td>
                         </tr>
                         
                         <tr>
-                            <!--yellow darken-3-->
+                            <td>3</td>
+                            <td>01/27/2019</td>
+                            <td>Water Treeting Chemical</td>
+                            <td>1</td>
+                            <td>
+                                <select class="browser-default custom-select" name="parts-action-2">
+                                    <option value="undecided" selected>Undecided</option>
+                                    <option value="accepted">Accept</option>
+                                    <option value="declined">Decline</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="browser-default custom-select" name="parts-type-2">
+                                    <option value="" disabled>Select a Type</option>
+                                    <option value="preventive">Preventive</option>
+                                    <option value="corrective">Corrective</option>
+                                </select>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>0</td>
+                            <td>2019/01/21 - 2019/01/22</td>
+                            <td>V fan belt </td>
+                            <td>1</td>
+                            <td>
+                                <select class="browser-default custom-select" name="parts-action-3">
+                                    <option value="undecided" selected>Undecided</option>
+                                    <option value="accepted">Accept</option>
+                                    <option value="declined">Decline</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="browser-default custom-select" name="parts-type-3">
+                                    <option value="" disabled>Select a Type</option>
+                                    <option value="preventive">Preventive</option>
+                                    <option value="corrective">Corrective</option>
+                                </select>
+                            </td>
+                        </tr>
+                        
+                        <tr>
                             <td>4</td>
-                            <td>Completed</td>
-                            <td>A/C Machine</td>
+                            <td>01/30/2019</td>
+                            <td>G8 Floricnt Lamp</td>
+                            <td>1</td>
                             <td>
-                               
-                                <input type="text" id="preventive-2" name="preventive-2" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '2')" class="btn btn-success btn-sm" id="preventive-2-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '2')" class="btn btn-danger btn-sm" id="preventive-2-decline"
-                                    type="button">Decline</button>
-
+                                <select class="browser-default custom-select" name="parts-action-4">
+                                    <option value="undecided" selected>Undecided</option>
+                                    <option value="accepted">Accept</option>
+                                    <option value="declined">Decline</option>
+                                </select>
                             </td>
-                        </tr>
-                        
-                        <tr>
-                            <!--yellow darken-3-->
-                            <td>6</td>
-                            <td>Not yet Completed</td>
-                            <td>A/C Machine</td>
                             <td>
-                               
-                                <input type="text" id="preventive-3" name="preventive-3" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '3')" class="btn btn-success btn-sm" id="preventive-3-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '3')" class="btn btn-danger btn-sm" id="preventive-3-decline"
-                                    type="button">Decline</button>
-
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <!--yellow darken-3-->
-                            <td>9</td>
-                            <td>Not yet Completed</td>
-                            <td>A/C Machine</td>
-                            <td>
-                               
-                                <input type="text" id="preventive-4" name="preventive-4" value="undecided"
-                                    hidden>
-                                <button onclick="setOpacity(true, '4')" class="btn btn-success btn-sm" id="preventive-4-accept"
-                                    type="button">Accept</button>
-                                <button onclick="setOpacity(false, '4')" class="btn btn-danger btn-sm" id="preventive-4-decline"
-                                    type="button">Decline</button>
-
+                                <select class="browser-default custom-select" name="parts-type-4">
+                                    <option value="" disabled>Select a Type</option>
+                                    <option value="preventive">Preventive</option>
+                                    <option value="corrective">Corrective</option>
+                                </select>
                             </td>
                         </tr>
                         
@@ -522,7 +428,19 @@
 </form>
                 </div>
                 <div class="tab-pane fade" id="pills-inspection" role="tabpanel" aria-labelledby="pills-inspection-tab">
-                    <form action="labourer-schedule.html" method="get">
+                    
+
+
+
+
+
+
+
+
+
+
+
+<form action="labourer-schedule.html" method="get">
     <h4>
         Inspections History
     </h4>
@@ -560,49 +478,46 @@
                             <th scope="col">Duration</th>
                             <th scope="col">Techincian</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Photo</th>
                         </tr>
                     </thead>
                     <tbody>
 
                         
                         <tr>
-                            <td>2000/0/0</td>
+                            <td>2019/1/3</td>
                             <td>Corrective</td>
-                            <td>10 weeks</td>
-                            <td>Mr. G. O. Rathnayake</td>
+                            <td>6 Weeks</td>
+                            <td>Mr. Amal Senewirathne</td>
                             <td> Completed </td>
+                            <td>
+                                <a href="http://ecoshopping-project.eu/wp-content/uploads/2017/06/AHU-1.png" target="_blank"
+                                    class="btn-link">View</a>
+                            </td>
                         </tr>
                         
                         <tr>
-                            <td>2001/1/1</td>
+                            <td>2019/1/4</td>
+                            <td>Corrective</td>
+                            <td>5 Weeks</td>
+                            <td>Mr. Senarath Hewawitharana</td>
+                            <td> Completed </td>
+                            <td>
+                                <a href="http://ecoshopping-project.eu/wp-content/uploads/2017/06/AHU-1.png" target="_blank"
+                                    class="btn-link">View</a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2019/1/2</td>
                             <td>Preventive</td>
-                            <td>9 weeks</td>
-                            <td>Mr. G. O. Rathnayake</td>
+                            <td>3 Week</td>
+                            <td>Mr. Amal Senewirathne</td>
                             <td> Completed </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>2002/2/2</td>
-                            <td>Corrective</td>
-                            <td>8 weeks</td>
-                            <td>Mr. G. O. Rathnayake</td>
-                            <td> Completed </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>2003/3/3</td>
-                            <td>Preventive</td>
-                            <td>7 weeks</td>
-                            <td>Mr. G. O. Rathnayake</td>
-                            <td> Not yet Completed </td>
-                        </tr>
-                        
-                        <tr>
-                            <td>2004/4/4</td>
-                            <td>Corrective</td>
-                            <td>6 weeks</td>
-                            <td>Mr. G. O. Rathnayake</td>
-                            <td> Not yet Completed </td>
+                            <td>
+                                <a href="http://ecoshopping-project.eu/wp-content/uploads/2017/06/AHU-1.png" target="_blank"
+                                    class="btn-link">View</a>
+                            </td>
                         </tr>
                         
 
@@ -740,39 +655,6 @@
         decoder.stop();
     })
 </script>
-
-    <script>
-        $(".activity-sel").click(function (v) {
-            key = this.id;
-            while (key.charAt(key.length - 1) == '-') {
-                key = key.substring(0, key.length - 1);
-            }
-            var targetButtons = $("." + key);
-            targetButtons.removeClass('btn-default');
-            targetButtons.addClass('btn-light');
-
-            var thisButton = $("#" + this.id).first();
-            thisButton.removeClass('btn-light');
-            thisButton.addClass('btn-default');
-
-            console.log(thisButton)
-        })
-    </script>
-
-    <script>
-        function setOpacity(accepted, index) {
-            if (accepted) {
-                $('#preventive-' + index).val('accept');
-                $('#preventive-' + index + '-accept').css('opacity', '1');
-                $('#preventive-' + index + '-decline').css('opacity', '0.5');
-            } else {
-                $('#preventive-' + index).val('decline');
-                $('#preventive-' + index + '-accept').css('opacity', '0.5');
-                $('#preventive-' + index + '-decline').css('opacity', '1');
-
-            }
-        }
-    </script>
     
 </body>
 

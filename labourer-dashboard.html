@@ -66,12 +66,33 @@
             <div class="tab-content pt-2 pl-1" id="pills-tabContent">
                 
                 <div class="tab-pane fade show active" id="pills-preventive" role="tabpanel" aria-labelledby="pills-preventive-tab">
-                    <form action="labourer-schedule.html" method="get">
+                    
+
+
+
+
+
+
+
+
+<form action="labourer-schedule.html" method="get">
     <h4>
-        Name: <b>AHU4</b>
+        Name: <b>CHILLER/AHU(A/C)</b>
     </h4>
 
-    <h5>Main Asset: <b>AC</b></h5>
+    <hr />
+
+    <div class="row">
+        <div class="col-lg-6">
+            <h5>Equipment No: <b>FS99777</b></h5>
+            <h5>Location: <b>Block 4</b></h5>
+            <h5>PM Frequency: <b>Monthly</b></h5>
+        </div>
+        <div class="col-lg-6">
+            <h5>Target Start Date: <b>2018/01/03</b></h5>
+            <h5>Target date of Completion: <b>2018/12/4</b></h5>
+        </div>
+    </div>
     <hr>
 
     <div class="row">
@@ -89,70 +110,70 @@
                 <input type="checkbox" class="custom-control-input todo-check" value="0" id="check0-preventive"
                     name="check0">
                 <label class="custom-control-label" for="check0-preventive">
-                    Change 0 alignment and color 0 with our 0 utilities.</label>
+                    Check for any abnormal noise & vibration from the unit</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="1" id="check1-preventive"
                     name="check1">
                 <label class="custom-control-label" for="check1-preventive">
-                    Change 1 alignment and color 1 with our 1 utilities.</label>
+                    Check for air filter.Cleanwith jet water ,refix the filter when properly dried.</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="2" id="check2-preventive"
                     name="check2">
                 <label class="custom-control-label" for="check2-preventive">
-                    Change 2 alignment and color 4 with our 8 utilities.</label>
+                    Check for any water leakage from the unit.</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="3" id="check3-preventive"
                     name="check3">
                 <label class="custom-control-label" for="check3-preventive">
-                    Change 3 alignment and color 9 with our 27 utilities.</label>
+                    Check for any water leakage from piping system.</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="4" id="check4-preventive"
                     name="check4">
                 <label class="custom-control-label" for="check4-preventive">
-                    Change 4 alignment and color 16 with our 64 utilities.</label>
+                    Thoroughly clean the fan section and fan wheel.</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="5" id="check5-preventive"
                     name="check5">
                 <label class="custom-control-label" for="check5-preventive">
-                    Change 5 alignment and color 25 with our 125 utilities.</label>
+                    Check the terminals tightness of the motor.</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="6" id="check6-preventive"
                     name="check6">
                 <label class="custom-control-label" for="check6-preventive">
-                    Change 6 alignment and color 36 with our 216 utilities.</label>
+                    Check & record the motor current & report any abnormalities</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="7" id="check7-preventive"
                     name="check7">
                 <label class="custom-control-label" for="check7-preventive">
-                    Change 7 alignment and color 49 with our 343 utilities.</label>
+                    Check & adjust the fresh air in take louvers.</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="8" id="check8-preventive"
                     name="check8">
                 <label class="custom-control-label" for="check8-preventive">
-                    Change 8 alignment and color 64 with our 512 utilities.</label>
+                    Check whether all the door seals are in good condition, replace if necessary.</label>
             </div>
             
             <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input todo-check" value="9" id="check9-preventive"
                     name="check9">
                 <label class="custom-control-label" for="check9-preventive">
-                    Change 9 alignment and color 81 with our 729 utilities.</label>
+                    Check the door inter lock operation</label>
             </div>
             
             
@@ -160,16 +181,16 @@
 </div>
         </div>
 
-        <!-- Description -->
+        <!-- Remarks -->
         <div class="col-lg-6">
             <div class="card mt-3">
     <div class="card-header blue-grey darken-2">
-        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Description</h5>
+        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Remarks</h5>
     </div>
     <div class="card-body">
         
             <div class="form-group">
-    <textarea class="form-control" name="Description" rows="3"></textarea>
+    <textarea class="form-control" name="Remarks" rows="3"></textarea>
 </div>
             
     </div>
@@ -201,68 +222,25 @@
 
     <div class="card mt-3">
     <div class="card-header blue-grey darken-2">
-        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Spare Parts</h5>
+        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Details</h5>
     </div>
     <div class="card-body">
         
-<div class="table-responsive">
-    <table class="table text-center">
-        <thead class="bg-white">
-            <tr>
-                <th scope="col">ID#</th>
-                <th scope="col">Item</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Date</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">1</th>
-                <td>A/C Machine</td>
-                <td>5</td>
-                <td>2000/0/0</td>
-            </tr>
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">2</th>
-                <td>A/C Machine</td>
-                <td>14</td>
-                <td>2001/1/1</td>
-            </tr>
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">3</th>
-                <td>A/C Machine</td>
-                <td>3</td>
-                <td>2002/2/2</td>
-            </tr>
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">4</th>
-                <td>A/C Machine</td>
-                <td>10</td>
-                <td>2003/3/3</td>
-            </tr>
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">5</th>
-                <td>A/C Machine</td>
-                <td>16</td>
-                <td>2004/4/4</td>
-            </tr>
-            
-
-        </tbody>
-    </table>
+    <p>Activity Carried By: </p>
+    <div class="form-group">
+    <input type="text" class="form-control" id="activity-carried-by-" name="activity-carried-by"></input>
 </div>
-
+    <br/>
+    <p>Shift Engineer: </p>
+    <div class="form-group">
+    <input type="text" class="form-control" id="shift-engineer-" name="shift-engineer"></input>
+</div>
+    <br/>
+    <p>Reviewed By: </p>
+    <div class="form-group">
+    <input type="text" class="form-control" id="reviewed-by-" name="reviewed-by"></input>
+</div>
+    
     </div>
 </div>
 
@@ -365,72 +343,6 @@
 
     </div>
 
-    <div class="card mt-3">
-    <div class="card-header blue-grey darken-2">
-        <h5 class="card-title text-white" style="text-shadow: 0px 0px 3px rgba(155,41,41, 1);">Spare Parts</h5>
-    </div>
-    <div class="card-body">
-        
-<div class="table-responsive">
-    <table class="table text-center">
-        <thead class="bg-white">
-            <tr>
-                <th scope="col">ID#</th>
-                <th scope="col">Item</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Date</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">1</th>
-                <td>A/C Machine</td>
-                <td>5</td>
-                <td>2000/0/0</td>
-            </tr>
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">2</th>
-                <td>A/C Machine</td>
-                <td>14</td>
-                <td>2001/1/1</td>
-            </tr>
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">3</th>
-                <td>A/C Machine</td>
-                <td>3</td>
-                <td>2002/2/2</td>
-            </tr>
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">4</th>
-                <td>A/C Machine</td>
-                <td>10</td>
-                <td>2003/3/3</td>
-            </tr>
-            
-            <tr>
-                <!--yellow darken-3-->
-                <th scope="row">5</th>
-                <td>A/C Machine</td>
-                <td>16</td>
-                <td>2004/4/4</td>
-            </tr>
-            
-
-        </tbody>
-    </table>
-</div>
-
-    </div>
-</div>
 
     <hr />
 
